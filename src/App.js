@@ -32,8 +32,16 @@ useEffect(() => {
 console.log(currentColorArrangement)
 
   return (
-    <div >
-
+    <div className="app">
+      <div className="game">
+        {currentColorArrangement.map((candyColor, index) => (
+          <img
+            alt={candyColor}
+            key={index}
+            style={{backgroundColor: candyColor}}
+          />
+        ))}
+      </div>
     </div>
   );
 }
